@@ -1,140 +1,187 @@
 @import '../../../styles.scss';
 
 .form-wrap {
-  padding: 5%;
+    padding: 5%;
 
-  form {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: $White;
-    border-radius: 10px;
-
-    .half {
-      flex-direction: column;
-
-      input {
-        width: 86%;
-      }
+    h1 {
+        font-size: 28px;
+        font-weight: 600;
     }
 
-    label {
-      display: block !important;
-      margin: 30px 0 10px;
+    form {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: $White;
+        border-radius: 10px;
 
-      span {
-        color: $Green-medium;
-      }
+        .half {
+            flex-direction: column;
+
+            input {
+                width: 86%;
+            }
+        }
+
+        label {
+            display: block !important;
+            margin: 30px 0 10px;
+
+            span {
+                color: $Green-medium;
+            }
+        }
+
+        input,
+        textarea {
+            width: 100%;
+        }
+
+        input {
+            padding: 10px 20px;
+            border: 1px solid #46373750;
+            border-radius: 5px;
+            width: 93%;
+        }
+
+        input[type=radio],
+        input[type=checkbox] {
+            width: 20px !important;
+        }
+
+        .radio-wrap {
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            width: 41%;
+            margin-top: 10px;
+            border: 1px solid #46373750;
+            padding: 10px 20px;
+            border-radius: 5px;
+
+            label {
+                margin: 0;
+            }
+        }
+
+        .check {
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+
+            label {
+                margin: 0;
+            }
+        }
+
+        textarea {
+            width: 93%;
+            // margin-top: 20px;
+            border: 1px solid rgba(70, 55, 55, 0.3137254902);
+            padding: 10px 20px;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+
+        button {
+            cursor: pointer;
+            font-size: 18px;
+            letter-spacing: 1px;
+            width: 100%;
+            padding: 20px 20px;
+            text-align: center;
+            background-color: $Green-medium;
+            color: $White;
+            border: 1px solid $Green-medium;
+            border-radius: 5px;
+            margin: 30px 0 10px;
+        }
+
+        .form-check-label {
+            display: block;
+        }
+
+        .check input:checked~.checkmark {
+            background-color: $Green-medium !important;
+        }
+
+        small {
+            color: #ff000080;
+            padding-top: 5px;
+        }
+
+        .desk-ml {
+            margin-left: 23px;
+        }
+
+        input:hover,
+        .radio-wrap:hover {
+            border: 1px solid $Green-medium;
+        }
+
+        .radio-wrap,
+        input[type=checkbox] {
+            cursor: pointer;
+        }
     }
-
-    input,
-    textarea {
-      width: 100%;
-    }
-
-    input {
-      padding: 10px 20px;
-      border: 1px solid #46373750;
-      border-radius: 5px;
-      width: 93%;
-    }
-
-    input[type=radio],
-    input[type=checkbox] {
-      width: 20px !important;
-    }
-
-    .radio-wrap {
-      display: inline-flex;
-      flex-direction: row;
-      align-items: center;
-      width: 41%;
-      margin-top: 10px;
-      border: 1px solid #46373750;
-      padding: 10px 20px;
-      border-radius: 5px;
-
-      label {
-        margin: 0;
-      }
-    }
-
-    .check {
-      display: inline-flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      margin-top: 20px;
-
-      label {
-        margin: 0;
-      }
-    }
-
-    textarea {
-      width: 93%;
-      // margin-top: 20px;
-      border: 1px solid rgba(70, 55, 55, 0.3137254902);
-      padding: 10px 20px;
-      border-radius: 5px;
-      min-height: 100px;
-    }
-
-    button {
-      cursor: pointer;
-      width: 100%;
-      padding: 10px 20px;
-      text-align: center;
-      background-color: $Green-medium;
-      color: $White;
-      border: 1px solid $Green-medium;
-      border-radius: 5px;
-      margin: 30px 0 10px;
-    }
-
-    .check input:checked~.checkmark {
-      background-color: $Green-medium !important;
-    }
-
-    .desk-ml {
-      margin-left: 23px;
-    }
-
-    input:hover,
-    .radio-wrap:hover {
-      border: 1px solid $Green-medium;
-    }
-
-    .radio-wrap,
-    input[type=checkbox] {
-      cursor: pointer;
-    }
-  }
 }
 
 
 
 @media screen and (max-width: 768.5px) {
-  .form-wrap {
-    form {
+    .form-wrap {
 
-      .radio-wrap,
-      input {
-        width: 93% !important;
-      }
-    }
 
-    .desk-ml {
-      margin-left: 0px !important;
+        form {
+            width: 80%;
+
+            .radio-wrap,
+            input {
+                width: 85% !important;
+            }
+            textarea{
+                width: 85%;
+            }
+        }
+
+        .desk-ml {
+            margin-left: 0px !important;
+        }
     }
-  }
+}
+
+@media screen and (max-width: 678.5px) {
+    .form-wrap {
+        form {
+            padding: 30px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 580.5px) {
+    .form-wrap {
+        form {
+            .radio-wrap {
+                .form-wrap {
+                    form {
+                        input {
+                            width: 90% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .text-danger {
-  font-size: 0.9em;
+    font-size: 0.9em;
 }
 
 .alert {
-  text-align: center;
+    text-align: center;
 }

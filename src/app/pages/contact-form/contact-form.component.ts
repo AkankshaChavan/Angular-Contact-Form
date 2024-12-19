@@ -17,28 +17,25 @@ export class ContactFormComponent {
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      firstName: ['', [Validators.required, Validators.minLength(3)]],
-      lastName: ['', [Validators.required, Validators.minLength(3)]],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      gender: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(10)]],
+      query: ['', Validators.required],
+      message: ['', Validators.required],
       terms: [false, Validators.requiredTrue],
     });
   }
 
   onSubmit() {
-    console.log('Submit button clicked');
     this.submitted = true;
   
     if (this.contactForm.valid) {
       this.success = true;
   
-      // Log the form values with labels
-      console.log('Form Submitted with the following values:');
       console.log(`First Name: ${this.contactForm.get('firstName')?.value}`);
       console.log(`Last Name: ${this.contactForm.get('lastName')?.value}`);
       console.log(`Email: ${this.contactForm.get('email')?.value}`);
-      console.log(`Gender: ${this.contactForm.get('gender')?.value}`);
+      console.log(`Query Type: ${this.contactForm.get('query')?.value}`);
       console.log(`Message: ${this.contactForm.get('message')?.value}`);
       console.log(
         `Terms & Conditions Accepted: ${this.contactForm.get('terms')?.value}`
@@ -51,5 +48,7 @@ export class ContactFormComponent {
       console.log('Form is invalid');
     }
   }
+
+  
   
 }

@@ -7,9 +7,9 @@
             <div class="group">
                 <div class="half">
                     <label for="firstName">First Name</label>
-                    <input id="firstName" type="text" class="form-control" formControlName="firstName" />
+                    <input id="firstName" type="text" class="form-control" formControlName="firstName"  />
                     <div *ngIf="submitted && contactForm.get('firstName')?.errors">
-                        <small class="text-danger"></small>
+                        <small class="text-danger">This field is required</small>
                     </div>
                 </div>
     
@@ -17,7 +17,7 @@
                     <label for="lastName">Last Name</label>
                     <input id="lastName" type="text" class="form-control" formControlName="lastName" />
                     <div *ngIf="submitted && contactForm.get('lastName')?.errors">
-                        <small class="text-danger">Last Name is required (minimum 3 characters).</small>
+                        <small class="text-danger">This field is required</small>
                     </div>
                 </div>
             </div>
@@ -33,15 +33,15 @@
             <div class="group">
                 <label>Query Type</label>
                 <div class="half radio-wrap">
-                    <input type="radio" formControlName="gender" value="Male" id="male" />
+                    <input type="radio" formControlName="query" value="General Enquiry" id="general" />
                     <label for="General Enquiry">General Enquiry</label>
                 </div>
                 <div class="half radio-wrap desk-ml">
-                    <input type="radio" formControlName="gender" value="Female" id="female" />
+                    <input type="radio" formControlName="query" value="Support Request" id="support" />
                     <label for="Support Request">Support Request</label>
                 </div>
-                <div *ngIf="submitted && contactForm.get('gender')?.errors">
-                    <small class="text-danger">choose one option</small>
+                <div *ngIf="submitted && contactForm.get('query')?.errors">
+                    <small class="text-danger">Please select a query type</small>
                 </div>
             </div>
     
