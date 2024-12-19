@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$Green-lighter: hsl(148, 38%, 91%);
+$Green-medium: hsl(169, 82%, 27%);
+$Red: hsl(0, 66%, 54%);
+$White: hsl(0, 0%, 100%);
+$Grey-medium: hsl(186, 15%, 59%);
+$Grey-darker: hsl(187, 24%, 22%);
+
+html {
+    background-color: $Green-lighter;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+
+.half {
+    width: 48%;
+    display: inline-flex;
+}
+
+@media screen and (max-width: 768.5px) {
+    .half {
+        width: 100%;
+        display: inline-flex;
+    }
+
+}
